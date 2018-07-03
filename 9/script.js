@@ -14,26 +14,20 @@
 
 
 const whichMouseButtonPressed= function (e) {
-    // Handle different event models
     var e = e || window.event;
     var btnCode;
-
     if ('object' === typeof e) {
         btnCode = e.button;
-
         switch (btnCode) {
             case 0:
                 alert('left mouse button');
             break;
-
             case 1:
               alert('middle mouse button');
             break;
-
             case 2:
                 console.log('right mouse button');
             break;
-
             default:
                 console.log('Неопределённое событие: ' + btnCode);
         }
