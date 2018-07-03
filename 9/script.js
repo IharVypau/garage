@@ -52,8 +52,8 @@ document.oncontextmenu=()=>{return false;};
              }
        });
        if (arrTags.length==0) {
-              reject("not found any tag with this ID ")
+              reject("not found any tag with this ID ");
              }
-             resolve(arrTags)
+             resolve(arrTags);
        }
    }
