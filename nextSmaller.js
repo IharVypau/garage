@@ -1,6 +1,5 @@
 
-function fac(n){
-    return(n<1)?1:fac(n-1)*n;
+const fac=(n)=>(n<1)?1:fac(n-1)*n;
 }
 
 function nextSmaller(n) {
