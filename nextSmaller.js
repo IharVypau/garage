@@ -1,6 +1,6 @@
 
 const fac=(n)=>(n<1)?1:fac(n-1)*n;
-}
+
 
 function nextSmaller(n) {
   let str=n.toString();
