@@ -9,7 +9,6 @@ let app = {};
 
 app.init = () =>{
     server.init();
-
     workers.init();
 };
 
