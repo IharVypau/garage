@@ -176,13 +176,14 @@ app.bindForms = function(){
 
             }
           }
-        }
+        };
 
-
+        
         // If the method is DELETE, the payload should be a queryStringObject instead
         var queryStringObject = method == 'DELETE' ? payload : {};
 
         // Call the API
+        console.log(undefined,path,method,queryStringObject,payload);
         app.client.request(undefined,path,method,queryStringObject,payload,function(statusCode,responsePayload){
           // Display an error on the form if needed
           if(statusCode !== 200){
@@ -204,6 +205,7 @@ app.bindForms = function(){
             }
           } else {
             // If successful, send to form response processor
+            
             app.formResponseProcessor(formId,payload,responsePayload);
           }
 
@@ -240,9 +242,10 @@ app.formResponseProcessor = function(formId,requestPayload,responsePayload){
         window.location = '/checks/all';
       }
     });
-  }
+  };
   // If login was successful, set the token in localstorage and redirect the user
   if(formId == 'sessionCreate'){
+    console.log(undefined,path,method,queryStringObject,payload);
     app.setSessionToken(responsePayload);
     window.location = '/checks/all';
   }
